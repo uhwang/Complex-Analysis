@@ -6,71 +6,61 @@
 
 URL: https://www.youtube.com/playlist?list=PLMrJAkhIeNNQBRslPb7I0yTnES981R8Cg
 
-
 == 4. Complex Logarithm \
 
-$z&=x+i y \
+$ z&=x+i y \
   &= R [cos(theta)+i sin(theta)] \
   &= R e^(i theta)
 $
 
-$z=x+i y$ \
-$w=u+i v$ \
-$w = log(z)$
+$ z=x+i y, wide w=u+i v, wide w = log(z) $
 
 The inverse pair of $w$ is $z=e^(w)$. \
 
-$z=e^(u+i v)&=e^u e^(i v) \
+$ z=e^(u+i v)&=e^u e^(i v) \
             &=e^u [cos(v)+i sin(v)]
 $ 
 
 By applying polar coordinate form:\
 
-$R = e^u -> u = log(R) := log(abs(z))$\
-$v = theta := angle z$
+$ R = e^u -> u = log(R) := log(abs(z)) $
+$ v = theta := angle z $
 
 On the z-plane, the complex number of z is a point with multiple times of $2pi n$. However, on w-plane the complex logarithm of z, $w=log(z) $ can have infinite number of points on the line of $log(R)$.
 
-$v=theta_p +2pi n:= angle z$ true for all integer n.
+$v=theta_p +2pi n:= angle z$ true for all integer n. This idea comes down to as follows:
 
-This idea comes down to as follows:\
-$u=log(abs(z))$\
-$v=theta_p + 2pi n$
+$ u=log(abs(z)) "and" v=theta_p + 2pi n $
 
-$w &= u + i v \
-   &= log(abs(z)) + i (theta_p+2pi n)$\
+$ w &= u + i v \
+   &= log(abs(z)) + i (theta_p+2pi n) $
 
-Replace $w$ as $log(z)$ then, \  
-
-$log(z) = log(abs(z))+i(theta_p + 2pi n)$ for all integer n.
+Replace $w$ as $log(z)$ then, $log(z) = log(abs(z))+i(theta_p + 2pi n)$ for all integer n.
 
 #image("complex analysis-01.svg")
 
 == 5. Roots of Unity and Rational Powers of z
 
-$log(z)=log(abs(z))+i(theta_p+2n pi) n in ZZ $\
-$z^a$\
-$z=e^(log(z)) => z^a = e^(a log(z))$
+$ log(z)=log(abs(z))+i(theta_p+2n pi) n in ZZ $
+$ z^a -> z=e^(log(z)) => z^a = e^(a log(z)) $
 
 Rational $a=m/n in QQ subset RR quad m,n in ZZ$\
 
-$Z^(m\/n) &= e^(m\/n log(Z))\
+$ Z^(m\/n) &= e^(m\/n log(Z))\
           &= e^(m/n log(R)+i m/n (theta_p + 2pi k))\
           &= e^(m/n log(R)) e^(i m/n theta_p) e^(i m/n 2pi k)
 $
 
-E.g. $root(4,16i)$\
-$16i = 16 e^(i pi/2)$\
-$16i^(1/4) &= 16^(1/4) e^(i pi/8) e^(i (2pi k)/4)\
-&=2e^(i pi/8)e^(i pi/2 k)$\
-
+E.g. $root(4,16i) -> 16i = 16 e^(i pi/2)$\
+$ 16i^(1/4) &= 16^(1/4) e^(i pi/8) e^(i (2pi k)/4)\
+&=2e^(i pi/8)e^(i pi/2 k) $\
 #table(
   columns: 2,
   [*k*], [*k-th root*],
-  [0], [$2e^(i pi/8)$],
-  [1], [$2e^(i pi/8)e^(i pi/2) -> 2e^(i (5pi)/8)$],
-  [2], [$2e^(i pi/8)e^(i pi) -> 2e^(i (9pi)/8)$],
-  [3], [$2e^(i pi/8)e^(i (3pi)/2) -> 2e^(i (13pi)/8)$],
+  [0], [$ 2e^(i pi/8) $],
+  [1], [$ 2e^(i pi/8)e^(i pi/2) -> 2e^(i (5pi)/8) $],
+  [2], [$ 2e^(i pi/8)e^(i pi) -> 2e^(i (9pi)/8) $],
+  [3], [$ 2e^(i pi/8)e^(i (3pi)/2) -> 2e^(i (13pi)/8) $],
 )
 
 #image("complex analysis-02.svg", width: 60%)
@@ -81,17 +71,15 @@ Keyword: well-behaved, analytic function
 
 #underline[Analytic Function]
 
-A function $f(z)$ is #underline(stroke:black, text(fill: purple, weight: "bold")[analytic]) in a domain $DD subset CC$ if $f(z)$ is single valued and has a finite derivative $f prime (z)$ for every $Z in DD$. 
-
-- Path Independent $->$ derivative must be same in any direction
+A function $f(z)$ is #underline(stroke:black, text(fill: purple, weight: "bold")[analytic]) in a domain $DD subset CC$ if $f(z)$ is single valued and has a finite derivative $f prime (z)$ for every $Z in DD$. Path Independent $->$ derivative must be same in any direction
 
 #underline[Non Analytic Function]
 
 $f(z)= overline(z)=x - i y -> $ no derivative exist!
 
-$frac(d f,d z) &= limits(lim)_(Delta z -> 0) (f(z+ Delta z)- f(z))/(Delta z)\
+$ frac(d f,d z) &= limits(lim)_(Delta z -> 0) (f(z+ Delta z)- f(z))/(Delta z)\
 &= limits(lim)_(Delta z ->0) overline(Delta Z)/(Delta Z)\
-&= (Delta x - i Delta y)/(Delta x + i Delta y)$
+&= (Delta x - i Delta y)/(Delta x + i Delta y) $
 
 Case 1. Approach $Delta z->0$ from real axis: $limits(lim)_(Delta x -> 0) (Delta x)/(Delta x) = 1$
 
@@ -109,23 +97,22 @@ Cauchy-Riemann for Analytic function
 
 - For a function to be analytic the derivative must be the same for the two paths on real & imag axes.
 
-$f(z)=u(x,y)+i v(x,y)\
-z = x + i y$
+$f(z)=u(x,y)+i v(x,y), wide z = x + i y$
 
-$frac(d f,d z) &= limits(lim)_(cases(Delta x -> 0,
-Delta y -> 0)) (Delta u + i Delta v)/(Delta x + i Delta y)$
+$ frac(d f,d z) &= limits(lim)_(cases(Delta x -> 0,
+Delta y -> 0)) (Delta u + i Delta v)/(Delta x + i Delta y) $
 
 (1) Approach from real axis: $Delta y = 0$
 
-$frac(d f,d z) &= limits(lim)_(Delta x -> 0) (Delta u + i Delta v)/(Delta x)
-&= (partial u)/(partial x) + i (partial v)/(partial x)$
+$ frac(d f,d z) &= limits(lim)_(Delta x -> 0) (Delta u + i Delta v)/(Delta x)
+&= (partial u)/(partial x) + i (partial v)/(partial x) $
 
 (2) Approach from imag axis: $Delta x = 0$
 
-$frac(d f,d z) &= limits(lim)_(Delta y -> 0) (Delta u + i Delta v)/(i Delta y)\
+$ frac(d f,d z) &= limits(lim)_(Delta y -> 0) (Delta u + i Delta v)/(i Delta y)\
 &= (i(Delta u + i Delta v))/(i dot i Delta y)\
 &=(Delta v - i Delta u)/(Delta y)\
-&=(partial v)/(partial y) - i (partial u)/(partial y)$
+&=(partial v)/(partial y) - i (partial u)/(partial y) $
 
 As a result, the real part of (1) must be equal to real part of (2). The imag part of (1) must be equal to image part of (2).\
 $ (partial u)/(partial x) &= (partial v)/(partial y),  (partial u)/(partial y) &= -(partial v)/(partial x) $
@@ -144,11 +131,11 @@ $u = x^2-y^2,  v = 2x y$
 
 (1) Real Axis
 
-$(d f)/(d z) = (partial u)/(partial x) + i (partial v)/(partial x) = 2x + i 2y = 2z$
+$ (d f)/(d z) = (partial u)/(partial x) + i (partial v)/(partial x) = 2x + i 2y = 2z $
 
 (2) Imag Axis
 
-$(d f)/(d z) = (partial v)/(partial y) - i (partial u)/(partial y) = (partial 2x y)/(partial y) - i (partial (x^2-y^2))/(partial y)= 2x + i 2y i =  2z$
+$ (d f)/(d z) = (partial v)/(partial y) - i (partial u)/(partial y) = (partial 2x y)/(partial y) - i (partial (x^2-y^2))/(partial y)= 2x + i 2y i =  2z $
 
 == 7. Analytic Functions Solve Laplace's Equation
 
@@ -164,7 +151,7 @@ If $f(z)$ is analytic and u, v both twice differentiable, then \
 
 (1) check $u$
 
-$(partial u)/(partial x) = (partial v)/(partial y) =>  (partial)/(partial x) => (partial^2 u)/(partial x^2)=(partial^2 v)/(partial x partial y)\
+$ (partial u)/(partial x) = (partial v)/(partial y) =>  (partial)/(partial x) => (partial^2 u)/(partial x^2)=(partial^2 v)/(partial x partial y)\
 
 (partial u)/(partial y) = -(partial v)/(partial x)=>  (partial)/(partial y) => 
 (partial^2 u)/(partial y^2) = -(partial^2 v)/(partial x partial y)\
@@ -174,13 +161,13 @@ $(partial u)/(partial x) = (partial v)/(partial y) =>  (partial)/(partial x) => 
 (partial^2 v)/(partial x partial y)=-(partial^2 u)/(partial y^2)\
 
 (partial^2 u)/(partial x^2) = -(partial^2 u)/(partial y^2) => (partial^2 u)/(partial x^2) +(partial^2 u)/(partial y^2)=0 => gradient^2 u = 0
-$
+ $
 
 $u$ is a harmonic function!
 
 (2) check $v$
 
-$(partial u)/(partial x) = (partial v)/(partial y) =>  (partial)/(partial y) => (partial u)/(partial x partial y)=(partial^2 v)/(partial y^2)\
+$ (partial u)/(partial x) = (partial v)/(partial y) =>  (partial)/(partial y) => (partial u)/(partial x partial y)=(partial^2 v)/(partial y^2)\
 
 (partial u)/(partial y) = -(partial v)/(partial x)=>  (partial)/(partial x) => 
 (partial^2 u)/(partial x partial y) = -(partial^2 v)/(partial x^2)\
@@ -200,38 +187,37 @@ $f(z)=u(R, theta) + i v(R,theta) "where" z = R e^(i theta)$
 
 #underline[_Chain Rule Method_]
 
-Total differential of z
+Total differential of z: 
 
-$d z = (partial z)/(partial r) d r + (partial z)/(partial theta) d theta$
-
+$ d z = (partial z)/(partial r) d r + (partial z)/(partial theta) d theta $
 
 Radial Direction: if $theta$ is a constant ($theta$ not change), $d theta = 0$:
 
-$d z = (partial z)/(partial r) d r -> (partial z)/(partial r) = (d z)/(d r) = d/(d r)r e^(i theta) = e^(i theta)$\
-$(d z)/(d r) = e^(i theta) -> (d r)/(d z) = (1)/(e^(i theta))
-$
+$ d z = (partial z)/(partial r) d r -> (partial z)/(partial r) = (d z)/(d r) = d/(d r)r e^(i theta) = e^(i theta) $
+$ (d z)/(d r) = e^(i theta) -> (d r)/(d z) = (1)/(e^(i theta))
+ $
 
-$f prime(z) &= (partial f)/(partial r) (d r)/(d z)\
-&=e^(-i theta) ((partial u)/(partial r)+i (partial v)/(partial r))$
+$ f prime(z) = (partial f)/(partial r) (d r)/(d z)
+=e^(-i theta) ((partial u)/(partial r)+i (partial v)/(partial r)) $
 
 Tangential Direction: if $r$ is a constant ($r$ not changed), $d r = 0$:
 
-$d z = (partial z)/(partial theta) d theta -> (partial z)/(partial theta) = (d z)/(d theta) = d/(d theta)r e^(i theta) = r i e^(i theta)$
+$ d z = (partial z)/(partial theta) d theta -> (partial z)/(partial theta) = (d z)/(d theta) = d/(d theta)r e^(i theta) = r i e^(i theta) $
 
-$(d z)/(d theta) = r i e^(i theta) -> (d theta)/(d z)&=(1)/(r i e^(i theta))\ &=(-i e^(-i theta))/(r)$
+$ (d z)/(d theta) = r i e^(i theta) -> (d theta)/(d z)&=(1)/(r i e^(i theta)) &=(-i e^(-i theta))/(r) $
 
-$f prime(z) &= (partial f)/(partial theta) (d theta)/(d z)\
-&= (-i e^(-i theta))/(r)((partial u)/(partial theta)+i (partial v)/(partial theta))\
-&=(e^(-i theta))/(r)(-i (partial u)/(partial theta)+(partial v)/(partial theta))$
+$ f prime(z) &= (partial f)/(partial theta) (d theta)/(d z)
+&= (-i e^(-i theta))/(r)((partial u)/(partial theta)+i (partial v)/(partial theta))
+&=(e^(-i theta))/(r)(-i (partial u)/(partial theta)+(partial v)/(partial theta)) $
 
 Equate the two $f prime (z)$ in both directions:
 
-$e^(-i theta) ((partial u)/(partial r)+i (partial v)/(partial r))=(e^(-i theta))/(r)(-i (partial u)/(partial theta)+(partial v)/(partial theta))$
+$ e^(-i theta) ((partial u)/(partial r)+i (partial v)/(partial r))=(e^(-i theta))/(r)(-i (partial u)/(partial theta)+(partial v)/(partial theta)) $
 
 Divide both sides by $e^(-i theta)$:
 
-$(partial u)/(partial r)+i (partial v)/(partial r)&=(1)/(r)(-i (partial u)/(partial theta)+(partial v)/(partial theta))\
-&=(1/r (partial v)/(partial theta)-i/r (partial u)/(partial theta))$
+$ (partial u)/(partial r)+i (partial v)/(partial r)&=(1)/(r)(-i (partial u)/(partial theta)+(partial v)/(partial theta))
+&=(1/r (partial v)/(partial theta)-i/r (partial u)/(partial theta)) $
 
 Finally, Cauchy-Riemann Equation as follows:
 
@@ -243,24 +229,23 @@ Imag part: $(partial v)/(partial r) = -i/r (partial u)/(partial theta)$\
 
 The standard definition of the complex derivative:
 
-$f prime (z) = limits(lim)_(Delta z --> 0) (f(z+Delta z)-f(z))/(Delta z)$
+$ f prime (z) = limits(lim)_(Delta z --> 0) (f(z+Delta z)-f(z))/(Delta z) $
 
 For a complex function to be differentiable, this limit must be the same regardless of the direction in which $Delta z$ approaches to zero.
 
 _Path 1. The radial limit: a small amount of change in radial direction at z $(Delta theta = 0)$_
 
 - $z=r e^(i theta)$
-- $z+Delta z &= (r+ Delta r)e^(i (theta+Delta theta))\
-&=(r+ Delta r)e^(i theta)$
+- $ z+Delta z &= (r+ Delta r)e^(i (theta+Delta theta))&=(r+ Delta r)e^(i theta)$
 
-- $Delta z &= -r e^(i theta)+(r+ Delta r)e^(i theta)\
-&=(-r+r+Delta r)e^(i theta)\
+- $Delta z &= -r e^(i theta)+(r+ Delta r)e^(i theta)
+&=(-r+r+Delta r)e^(i theta)
 &= Delta r e^(i theta)
 $
 
 The limit becomes:
 
-$f prime (z) &= limits(lim)_(Delta z --> 0) (f(z+Delta z)-f(z))/(Delta z)\
+$ f prime (z) &= limits(lim)_(Delta z --> 0) (f(z+Delta z)-f(z))/(Delta z)\
 &= limits(lim)_(Delta r -> 0) (f((r+ Delta r)e^(i theta))-f(r e^(i theta)))/(Delta r e^(i theta))\
 &=(1)/( e^(i theta)) [limits(lim)_(Delta r ->0) (f(r+ Delta r, theta)-f(r, theta))/(Delta r)]\
 &=e^(-i theta) (partial f)/(partial r)\
@@ -272,58 +257,54 @@ _Path 2. The tangential limit $(Delta r = 0)$_
 - $z=r e^(i theta)$
 - $z+Delta z = r e^(i (theta+Delta theta))$
 
-- $Delta z &= -z + r e^(i (theta+Delta theta))\
-&= -r e^(i theta)+r e^(i (theta+Delta theta))\
-&=-r e^(i theta)+r e^(i theta) dot e^(i Delta theta)\
+- $Delta z &= -z + r e^(i (theta+Delta theta))
+&= -r e^(i theta)+r e^(i (theta+Delta theta))
+&=-r e^(i theta)+r e^(i theta) dot e^(i Delta theta)
 &= (e^(i Delta theta)-1)r e^(i theta)
 $
 
 Using Taylor Series for $e^(i Delta theta)$:
 
-$e^x = 1 + x + (x^2)/(2!)+(x^3)/(3!)+...$
+$ e^x = 1 + x + (x^2)/(2!)+(x^3)/(3!)+... $
 
-$e^(i Delta theta) = 1 + (i Delta theta) + ((i Delta theta)^2)/(2!)+((i Delta theta)^3)/(3!)+...$
+$ e^(i Delta theta) = 1 + (i Delta theta) + ((i Delta theta)^2)/(2!)+((i Delta theta)^3)/(3!)+... s $
 
 We can drop the higher terms as $Delta theta ->0$.
 
-$e^(i Delta theta) approx 1 + i Delta theta$\
+$ e^(i Delta theta) approx 1 + i Delta theta $\
 
-$Delta z &= (e^(i Delta theta)-1)r e^(i theta)\
-&=(1 + i Delta theta -1)r e^(i theta)\
+$ Delta z &= (e^(i Delta theta)-1)r e^(i theta)
+&=(1 + i Delta theta -1)r e^(i theta)
 &=i r e^(i theta) Delta theta $
 
 The limit becomes:
 
-$f prime (z) &= limits(lim)_(Delta z --> 0) (f(z+Delta z)-f(z))/(Delta z)\
+$ f prime (z) &= limits(lim)_(Delta z --> 0) (f(z+Delta z)-f(z))/(Delta z)\
 &= limits(lim)_(Delta theta -> 0) (f(r e^(i (theta+Delta theta)))-f(r e^(i theta)))/(i r e^(i theta) Delta theta)\
 &=(1)/( i r e^(i theta)) [limits(lim)_(Delta theta ->0) (f(r, theta+Delta theta)-f(r, theta))/(Delta theta)]\
 &=(1)/( i r e^(i theta)) (partial f)/(partial theta)\
 &=(-i e^(-i theta))/(r)(partial f)/(partial theta)\
 &=(-i e^(-i theta))/(r)((partial u)/(partial theta)+i (partial v)/(partial theta))\
-&=e^(-i theta)/(r)(-i (partial u)/(partial theta)+(partial v)/(partial theta))$
+&=e^(-i theta)/(r)(-i (partial u)/(partial theta)+(partial v)/(partial theta)) $
 
 If we equate the two $f prime (z)$ in both directions, we can get the same Cauchy-Riemann equation with Chain-Rule.
 
 Verify that $log(z)$ is analytic away from $z=0$ using Cauchy-Riemann condition with polar form. 
 
-$log(z)= log(R)+i theta\
-u(R, theta)=log(R) \ v(R, theta)=theta$
+$ log(z)= log(R)+i theta wide
+u(R, theta)=log(R) wide v(R, theta)=theta $
 
 Clearly, $u_theta=0$ because $u$ is a function of $R$ and $v_R$ is zero because v is a function of $theta$.
 
-Real part: $(partial u)/(partial r) = 1/r (partial v)/(partial theta)$\
-
-$(partial u)/(partial R)= 1/(partial R) log(R)=1/R$
-
-$(partial v)/(partial theta)=1/(partial theta) theta=1$
-
-$(partial u)/(partial R) = 1/r (partial v)/(partial theta)$ becomes $1/R = 1 1/R$
+Real part: $(partial u)/(partial r) = 1/r (partial v)/(partial theta) $
+$ (partial u)/(partial R)= 1/(partial R) log(R)=1/R $
+$ (partial v)/(partial theta)=1/(partial theta) theta=1 $
+$ (partial u)/(partial R) = 1/r (partial v)/(partial theta) -> 1/R = 1 1/R $
 
 Imag part: $(partial v)/(partial r) = -i/r (partial u)/(partial theta)$\
 
-$(partial v)/(partial R)=partial/(partial R) theta=0$
-
-$(partial u)/(partial theta) = partial/(partial theta)R=0$
+$ (partial v)/(partial R)=partial/(partial R) theta=0 , wide
+ (partial u)/(partial theta) = partial/(partial theta)R=0 $
 
 
 #underline[_Complex Functions(Analytic)_]
@@ -336,7 +317,6 @@ in a domain $DD subset CC$ is analytic in $DD$ _iff_ the Cauchy-Riemann conditio
 Theorem 2. If a $f(z)$ is analytic at $z$ then $f(z)$ has continuous derivatives of all orders! $f prime (z), f prime prime (z), ... f^(15)(z), ...$
 
 The main application: $f(z)$ is analytic at $z_0$ _iff_ its Taylor series exists and converges to $f(z)$ in a neighborhood of $z_0$. 
-
 
 == 8. Integrals in the Complex Plane (1/8/2025 Thu)
 
@@ -431,10 +411,9 @@ $ limits(integral.cont)_C (f(z))/(z-a)d z = 2 pi i f(a) $
 
 Proof.
 
-$limits(integral.cont) (f(z))/(z-a) d z = limits(integral.cont) (f(a))/(z-a)d z + limits(integral.cont) (f(z)-f(a))/(z-a)d z$
+$ limits(integral.cont) (f(z))/(z-a) d z = limits(integral.cont) (f(a))/(z-a)d z + limits(integral.cont) (f(z)-f(a))/(z-a)d z $
 
-$I_1 = limits(integral.cont) (f(a))/(z-a)d z \
-I_2 = limits(integral.cont) (f(z)-f(a))/(z-a)d z$
+$ I_1 = limits(integral.cont) (f(a))/(z-a)d z wide I_2 = limits(integral.cont) (f(z)-f(a))/(z-a)d z $
 
 Solve $I_1 ":" limits(integral.cont) (f(a))/(z-a)d z$
 
@@ -508,7 +487,7 @@ $
 
 The four solutions are:
 $
-z_0, z_3 &= plus.minus a/sqrt(2) + i a/sqrt(2) \
+z_0, z_3 &= plus.minus a/sqrt(2) + i a/sqrt(2) wide 
 z_1, z_2 &= plus.minus a/sqrt(2) - i a/sqrt(2)
 $
 
@@ -518,7 +497,6 @@ $ z = a/sqrt(2) (plus.minus 1 plus.minus i) $
 #image("real value f(x).png", width: 40%)
 
 If I take the limit goes to infinity, $C_1$ becomes $-infinity "to" +infinity$ and $C_R$ becomes $infinity$. Then the contribution of $limits(integral)_(C_R)$ becomes zero, and we can calculate $limits(integral)_(C_1)$ using Cauchy Integral Formula.
-
 
 $ limits(integral.cont)_C = limits(integral)_(C_1)+limits(integral)_(C_R) wide => wide limits(integral.cont)_C f(z)d z = limits(integral)_(-R)^R (d x)/(x^4+a^4)+limits(integral)_(C_R) (d z)/(x^4+a^4) $
 
